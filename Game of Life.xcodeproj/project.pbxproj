@@ -415,6 +415,7 @@
 		ADE8E4DB218B2F65007E6B01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -476,6 +477,7 @@
 		ADE8E4DC218B2F65007E6B01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -568,7 +570,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE7184A8C55879E1E9B95290 /* Pods-Game of LifeTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Game of LifeTests/Info.plist";
@@ -589,7 +590,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D912715D45725132E973435 /* Pods-Game of LifeTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Game of LifeTests/Info.plist";
@@ -610,7 +610,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D8A72C5B4BFFD8CA47C52EF /* Pods-Game of LifeUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Game of LifeUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -630,7 +629,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61E68813E5BACE4ED0F58AA5 /* Pods-Game of LifeUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Game of LifeUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
