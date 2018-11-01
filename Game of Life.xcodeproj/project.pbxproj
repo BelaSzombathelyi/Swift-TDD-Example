@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A3C997C5D36EA17A3A279E1 /* Pods_Game_of_LifeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C762FAC2804F14F101743 /* Pods_Game_of_LifeUITests.framework */; };
-		6EDD750160F882796F500923 /* Pods_Game_of_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D10BD3F8E5CCB71F943BD6 /* Pods_Game_of_Life.framework */; };
-		A153B4617211A2791CF6F4C7 /* Pods_Game_of_LifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E268FD8D345EDB6C6C9F69 /* Pods_Game_of_LifeTests.framework */; };
+		309328B4C93F97CF279844DA /* libPods-Game of Life.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4B2408F100ADC0C79935AF /* libPods-Game of Life.a */; };
+		5835C70B45BF540BDA369A32 /* libPods-Game of LifeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A480E37612A9C0362152E67C /* libPods-Game of LifeUITests.a */; };
 		ADE8E4B9218B2F64007E6B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */; };
 		ADE8E4BB218B2F64007E6B01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4BA218B2F64007E6B01 /* ViewController.swift */; };
 		ADE8E4BE218B2F64007E6B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE8E4BC218B2F64007E6B01 /* Main.storyboard */; };
@@ -17,6 +16,7 @@
 		ADE8E4C3218B2F65007E6B01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE8E4C1218B2F65007E6B01 /* LaunchScreen.storyboard */; };
 		ADE8E4CE218B2F65007E6B01 /* Game_of_LifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4CD218B2F65007E6B01 /* Game_of_LifeTests.swift */; };
 		ADE8E4D9218B2F65007E6B01 /* Game_of_LifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4D8218B2F65007E6B01 /* Game_of_LifeUITests.swift */; };
+		FFF9CA2862993D33A7A2353F /* libPods-Game of LifeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D570199AE8FA621142232E16 /* libPods-Game of LifeTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		33D10BD3F8E5CCB71F943BD6 /* Pods_Game_of_Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Game_of_Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7C2190294A68A4AB47A046 /* Pods-Game of Life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of Life.release.xcconfig"; path = "Pods/Target Support Files/Pods-Game of Life/Pods-Game of Life.release.xcconfig"; sourceTree = "<group>"; };
 		61E68813E5BACE4ED0F58AA5 /* Pods-Game of LifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeUITests/Pods-Game of LifeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6D4B2408F100ADC0C79935AF /* libPods-Game of Life.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Game of Life.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8A72C5B4BFFD8CA47C52EF /* Pods-Game of LifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeUITests/Pods-Game of LifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D912715D45725132E973435 /* Pods-Game of LifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeTests/Pods-Game of LifeTests.release.xcconfig"; sourceTree = "<group>"; };
+		A480E37612A9C0362152E67C /* libPods-Game of LifeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Game of LifeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE8E4B5218B2F63007E6B01 /* Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADE8E4BA218B2F64007E6B01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +57,8 @@
 		ADE8E4D8218B2F65007E6B01 /* Game_of_LifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_of_LifeUITests.swift; sourceTree = "<group>"; };
 		ADE8E4DA218B2F65007E6B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0B685C3541658C08AB9EEAF /* Pods-Game of Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of Life.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Game of Life/Pods-Game of Life.debug.xcconfig"; sourceTree = "<group>"; };
-		C6E268FD8D345EDB6C6C9F69 /* Pods_Game_of_LifeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Game_of_LifeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7184A8C55879E1E9B95290 /* Pods-Game of LifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeTests/Pods-Game of LifeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DB0C762FAC2804F14F101743 /* Pods_Game_of_LifeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Game_of_LifeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D570199AE8FA621142232E16 /* libPods-Game of LifeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Game of LifeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EDD750160F882796F500923 /* Pods_Game_of_Life.framework in Frameworks */,
+				309328B4C93F97CF279844DA /* libPods-Game of Life.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A153B4617211A2791CF6F4C7 /* Pods_Game_of_LifeTests.framework in Frameworks */,
+				FFF9CA2862993D33A7A2353F /* libPods-Game of LifeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3C997C5D36EA17A3A279E1 /* Pods_Game_of_LifeUITests.framework in Frameworks */,
+				5835C70B45BF540BDA369A32 /* libPods-Game of LifeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,9 +92,9 @@
 		9FE5E9F12798813DA5506423 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				33D10BD3F8E5CCB71F943BD6 /* Pods_Game_of_Life.framework */,
-				C6E268FD8D345EDB6C6C9F69 /* Pods_Game_of_LifeTests.framework */,
-				DB0C762FAC2804F14F101743 /* Pods_Game_of_LifeUITests.framework */,
+				6D4B2408F100ADC0C79935AF /* libPods-Game of Life.a */,
+				D570199AE8FA621142232E16 /* libPods-Game of LifeTests.a */,
+				A480E37612A9C0362152E67C /* libPods-Game of LifeUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

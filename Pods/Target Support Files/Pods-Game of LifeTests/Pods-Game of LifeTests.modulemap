@@ -1,4 +1,4 @@
-framework module Pods_Game_of_LifeTests {
+module Pods_Game_of_LifeTests {
   umbrella header "Pods-Game of LifeTests-umbrella.h"
 
   export *
