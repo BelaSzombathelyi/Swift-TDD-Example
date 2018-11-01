@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3C997C5D36EA17A3A279E1 /* Pods_Game_of_LifeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C762FAC2804F14F101743 /* Pods_Game_of_LifeUITests.framework */; };
+		6EDD750160F882796F500923 /* Pods_Game_of_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D10BD3F8E5CCB71F943BD6 /* Pods_Game_of_Life.framework */; };
+		A153B4617211A2791CF6F4C7 /* Pods_Game_of_LifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E268FD8D345EDB6C6C9F69 /* Pods_Game_of_LifeTests.framework */; };
 		ADE8E4B9218B2F64007E6B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */; };
 		ADE8E4BB218B2F64007E6B01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4BA218B2F64007E6B01 /* ViewController.swift */; };
 		ADE8E4BE218B2F64007E6B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE8E4BC218B2F64007E6B01 /* Main.storyboard */; };
@@ -34,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33D10BD3F8E5CCB71F943BD6 /* Pods_Game_of_Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Game_of_Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E7C2190294A68A4AB47A046 /* Pods-Game of Life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of Life.release.xcconfig"; path = "Pods/Target Support Files/Pods-Game of Life/Pods-Game of Life.release.xcconfig"; sourceTree = "<group>"; };
+		61E68813E5BACE4ED0F58AA5 /* Pods-Game of LifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeUITests/Pods-Game of LifeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6D8A72C5B4BFFD8CA47C52EF /* Pods-Game of LifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeUITests/Pods-Game of LifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D912715D45725132E973435 /* Pods-Game of LifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeTests/Pods-Game of LifeTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADE8E4B5218B2F63007E6B01 /* Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADE8E4BA218B2F64007E6B01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		ADE8E4D4218B2F65007E6B01 /* Game of LifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game of LifeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE8E4D8218B2F65007E6B01 /* Game_of_LifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_of_LifeUITests.swift; sourceTree = "<group>"; };
 		ADE8E4DA218B2F65007E6B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B685C3541658C08AB9EEAF /* Pods-Game of Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of Life.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Game of Life/Pods-Game of Life.debug.xcconfig"; sourceTree = "<group>"; };
+		C6E268FD8D345EDB6C6C9F69 /* Pods_Game_of_LifeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Game_of_LifeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7184A8C55879E1E9B95290 /* Pods-Game of LifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeTests/Pods-Game of LifeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0C762FAC2804F14F101743 /* Pods_Game_of_LifeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Game_of_LifeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EDD750160F882796F500923 /* Pods_Game_of_Life.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A153B4617211A2791CF6F4C7 /* Pods_Game_of_LifeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3C997C5D36EA17A3A279E1 /* Pods_Game_of_LifeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FE5E9F12798813DA5506423 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33D10BD3F8E5CCB71F943BD6 /* Pods_Game_of_Life.framework */,
+				C6E268FD8D345EDB6C6C9F69 /* Pods_Game_of_LifeTests.framework */,
+				DB0C762FAC2804F14F101743 /* Pods_Game_of_LifeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ADE8E4AC218B2F63007E6B01 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,8 @@
 				ADE8E4CC218B2F65007E6B01 /* Game of LifeTests */,
 				ADE8E4D7218B2F65007E6B01 /* Game of LifeUITests */,
 				ADE8E4B6218B2F63007E6B01 /* Products */,
+				CD190C140B19B0297F4A65CF /* Pods */,
+				9FE5E9F12798813DA5506423 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +152,19 @@
 			path = "Game of LifeUITests";
 			sourceTree = "<group>";
 		};
+		CD190C140B19B0297F4A65CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0B685C3541658C08AB9EEAF /* Pods-Game of Life.debug.xcconfig */,
+				5E7C2190294A68A4AB47A046 /* Pods-Game of Life.release.xcconfig */,
+				CE7184A8C55879E1E9B95290 /* Pods-Game of LifeTests.debug.xcconfig */,
+				8D912715D45725132E973435 /* Pods-Game of LifeTests.release.xcconfig */,
+				6D8A72C5B4BFFD8CA47C52EF /* Pods-Game of LifeUITests.debug.xcconfig */,
+				61E68813E5BACE4ED0F58AA5 /* Pods-Game of LifeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +172,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADE8E4DD218B2F65007E6B01 /* Build configuration list for PBXNativeTarget "Game of Life" */;
 			buildPhases = (
+				7FA201032C822935CADF42C7 /* [CP] Check Pods Manifest.lock */,
 				ADE8E4B1218B2F63007E6B01 /* Sources */,
 				ADE8E4B2218B2F63007E6B01 /* Frameworks */,
 				ADE8E4B3218B2F63007E6B01 /* Resources */,
@@ -149,6 +190,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADE8E4E0218B2F65007E6B01 /* Build configuration list for PBXNativeTarget "Game of LifeTests" */;
 			buildPhases = (
+				0F8CB60E90EE267AC47EF06D /* [CP] Check Pods Manifest.lock */,
 				ADE8E4C5218B2F65007E6B01 /* Sources */,
 				ADE8E4C6218B2F65007E6B01 /* Frameworks */,
 				ADE8E4C7218B2F65007E6B01 /* Resources */,
@@ -167,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADE8E4E3218B2F65007E6B01 /* Build configuration list for PBXNativeTarget "Game of LifeUITests" */;
 			buildPhases = (
+				E2DF81AAA0063FA96C019134 /* [CP] Check Pods Manifest.lock */,
 				ADE8E4D0218B2F65007E6B01 /* Sources */,
 				ADE8E4D1218B2F65007E6B01 /* Frameworks */,
 				ADE8E4D2218B2F65007E6B01 /* Resources */,
@@ -250,6 +293,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F8CB60E90EE267AC47EF06D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Game of LifeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FA201032C822935CADF42C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Game of Life-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2DF81AAA0063FA96C019134 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Game of LifeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADE8E4B1218B2F63007E6B01 /* Sources */ = {
@@ -430,6 +530,7 @@
 		};
 		ADE8E4DE218B2F65007E6B01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0B685C3541658C08AB9EEAF /* Pods-Game of Life.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +548,7 @@
 		};
 		ADE8E4DF218B2F65007E6B01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E7C2190294A68A4AB47A046 /* Pods-Game of Life.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +566,7 @@
 		};
 		ADE8E4E1218B2F65007E6B01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE7184A8C55879E1E9B95290 /* Pods-Game of LifeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +587,7 @@
 		};
 		ADE8E4E2218B2F65007E6B01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D912715D45725132E973435 /* Pods-Game of LifeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +608,7 @@
 		};
 		ADE8E4E4218B2F65007E6B01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D8A72C5B4BFFD8CA47C52EF /* Pods-Game of LifeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +628,7 @@
 		};
 		ADE8E4E5218B2F65007E6B01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E68813E5BACE4ED0F58AA5 /* Pods-Game of LifeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
