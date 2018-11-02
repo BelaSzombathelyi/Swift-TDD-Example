@@ -11,7 +11,7 @@ class GamePresenter: GamePresentationLogic {
    
    func presentNextUniverse(response: Game.NextStepResponse) {
       let viewModel = Game.ViewModel(universe: response.universe)
-      viewController?.displayNextUniverse(viewModel: viewModel)
+      viewController?.displayUniverse(viewModel: viewModel)
    }
 }
 

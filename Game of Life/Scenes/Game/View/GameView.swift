@@ -2,7 +2,7 @@ import UIKit
 import CoreGraphics
 
 class GameView: UIView {
-	
+   
    private lazy var canvas: CAShapeLayer = {
       var canvas = CAShapeLayer()
       canvas.fillColor = UIColor.yellow.cgColor
@@ -11,24 +11,16 @@ class GameView: UIView {
    }()
 	
    private func path(forPresentUniverse universe: Game.Universe) -> UIBezierPath {
-      let size = self.frame.size
-      let cellHeight = size.height / CGFloat(universe.dimensions.height)
-      let cellWidth = size.width / CGFloat(universe.dimensions.width)
-      let cellSize = CGSize(width: cellWidth, height: cellHeight)
-      
       let path = UIBezierPath()
       for row in 0..<universe.dimensions.height {
-         let y = CGFloat(row) * cellHeight
          for column in 0..<universe.dimensions.width {
             let value = universe.cells[Int(row)][Int(column)]
             if (!value) {
                continue
             }
-            let x = CGFloat(column) * cellWidth
-            let point = CGPoint(x: x, y: y)
-            let rect = CGRect(origin: point, size: cellSize)
-            let cellPath = UIBezierPath(rect: rect.integral)
-            path.append(cellPath)
+            let point = CGPoint(x: Int(column), y: Int(row))
+            let rect = CGRect(origin: point, size: CGSize(width: 1, height: 1))
+            path.append(UIBezierPath(rect: rect))
          }
       }
       return path
@@ -38,5 +30,13 @@ class GameView: UIView {
       let path = self.path(forPresentUniverse: universe)
       canvas.frame = self.bounds
       canvas.path = path.cgPath
+   }
+   
+   func update(byDimensions dimensions: Game.Dimensions) {
+      let scaleX = self.frame.size.width / CGFloat(dimensions.width)
+      let scaleY = self.frame.size.height / CGFloat(dimensions.height)
+      let transform2D = CGAffineTransform(scaleX: scaleX, y: scaleY)
+      canvas.transform = CATransform3DMakeAffineTransform(transform2D)
+      canvas.frame = self.bounds
    }
 }

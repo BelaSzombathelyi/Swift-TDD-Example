@@ -1,7 +1,7 @@
 import UIKit
 
 protocol GameDisplayLogic: class {
-   func displayNextUniverse(viewModel: Game.ViewModel)
+   func displayUniverse(viewModel: Game.ViewModel)
 }
 
 class GameViewController: BaseViewController, GameDisplayLogic {
@@ -27,15 +27,32 @@ class GameViewController: BaseViewController, GameDisplayLogic {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      interactor?.start(stepTimeInterval: 0.3)
+      interactor?.start(stepTimeInterval: 3)
    }
-   
-   // MARK: Scrolling to next step
    
    @IBOutlet weak var gameView: GameView!
    
-   func displayNextUniverse(viewModel: Game.ViewModel) {
+   // MARK: Rotation support
+
+   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+      coordinator.animate(alongsideTransition: { _ in
+      }, completion: { _ in
+         guard let dataStore = self.interactor as? GameDataStore else { assertionFailure(); return }
+         guard let universe = dataStore.currentUniverse else { assertionFailure(); return }
+         self.updateDisplayedUniverse(withDimensions: universe.dimensions)
+      })
+      super.viewWillTransition(to: size, with: coordinator)
+   }
+   
+   func updateDisplayedUniverse(withDimensions dimensions: Game.Dimensions) {
+      gameView.update(byDimensions: dimensions)
+   }
+   
+   // MARK: GameDisplayLogic
+   
+   func displayUniverse(viewModel: Game.ViewModel) {
       gameView.display(universe: viewModel.universe)
+      updateDisplayedUniverse(withDimensions: viewModel.universe.dimensions)
    }
 }
 
