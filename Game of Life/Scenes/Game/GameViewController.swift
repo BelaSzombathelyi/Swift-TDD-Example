@@ -25,9 +25,14 @@ class GameViewController: BaseViewController, GameDisplayLogic {
    
    // MARK: View lifecycle
    
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      interactor?.start(stepTimeInterval: 3)
+   override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      interactor?.start(request: Game.StartRequest(stepTimeInterval: 0.3))
+   }
+
+   override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+      interactor?.stop()
    }
    
    @IBOutlet weak var gameView: GameView!

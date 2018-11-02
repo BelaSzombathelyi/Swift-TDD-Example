@@ -30,8 +30,8 @@ enum Game {
       }
    }
    
-   struct NextStepRequest {
-      let universe: Universe
+   struct StartRequest {
+      let stepTimeInterval: TimeInterval
    }
    
    struct NextStepResponse {
