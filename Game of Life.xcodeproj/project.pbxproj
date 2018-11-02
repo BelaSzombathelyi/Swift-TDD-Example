@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		309328B4C93F97CF279844DA /* libPods-Game of Life.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4B2408F100ADC0C79935AF /* libPods-Game of Life.a */; };
 		5835C70B45BF540BDA369A32 /* libPods-Game of LifeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A480E37612A9C0362152E67C /* libPods-Game of LifeUITests.a */; };
+		AD41705F218B3A52008BA20A /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417059218B3A52008BA20A /* GamePresenter.swift */; };
+		AD417060218B3A52008BA20A /* GameWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41705A218B3A52008BA20A /* GameWorker.swift */; };
+		AD417062218B3A52008BA20A /* GameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41705C218B3A52008BA20A /* GameModels.swift */; };
+		AD417063218B3A52008BA20A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41705D218B3A52008BA20A /* GameViewController.swift */; };
+		AD417064218B3A52008BA20A /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41705E218B3A52008BA20A /* GameInteractor.swift */; };
+		AD417067218B3C9A008BA20A /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD417066218B3C9A008BA20A /* GameViewController.xib */; };
+		AD41706A218B40D2008BA20A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417069218B40D2008BA20A /* GameView.swift */; };
+		AD41706D218B5A2C008BA20A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41706C218B5A2C008BA20A /* BaseViewController.swift */; };
+		AD417071218B61CA008BA20A /* BaseViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417070218B61CA008BA20A /* BaseViewControllerSpec.swift */; };
+		AD41707D218B8402008BA20A /* GameModelsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41707C218B8402008BA20A /* GameModelsSpec.swift */; };
+		AD41707F218B8813008BA20A /* GameWorkerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41707E218B8813008BA20A /* GameWorkerSpec.swift */; };
 		ADE8E4B9218B2F64007E6B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */; };
-		ADE8E4BB218B2F64007E6B01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4BA218B2F64007E6B01 /* ViewController.swift */; };
-		ADE8E4BE218B2F64007E6B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE8E4BC218B2F64007E6B01 /* Main.storyboard */; };
 		ADE8E4C0218B2F65007E6B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADE8E4BF218B2F65007E6B01 /* Assets.xcassets */; };
 		ADE8E4C3218B2F65007E6B01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE8E4C1218B2F65007E6B01 /* LaunchScreen.storyboard */; };
-		ADE8E4CE218B2F65007E6B01 /* Game_of_LifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4CD218B2F65007E6B01 /* Game_of_LifeTests.swift */; };
 		ADE8E4D9218B2F65007E6B01 /* Game_of_LifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4D8218B2F65007E6B01 /* Game_of_LifeUITests.swift */; };
 		FFF9CA2862993D33A7A2353F /* libPods-Game of LifeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D570199AE8FA621142232E16 /* libPods-Game of LifeTests.a */; };
 /* End PBXBuildFile section */
@@ -43,15 +51,23 @@
 		6D8A72C5B4BFFD8CA47C52EF /* Pods-Game of LifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeUITests/Pods-Game of LifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D912715D45725132E973435 /* Pods-Game of LifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeTests/Pods-Game of LifeTests.release.xcconfig"; sourceTree = "<group>"; };
 		A480E37612A9C0362152E67C /* libPods-Game of LifeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Game of LifeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD417059218B3A52008BA20A /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		AD41705A218B3A52008BA20A /* GameWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWorker.swift; sourceTree = "<group>"; };
+		AD41705C218B3A52008BA20A /* GameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModels.swift; sourceTree = "<group>"; };
+		AD41705D218B3A52008BA20A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AD41705E218B3A52008BA20A /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
+		AD417066218B3C9A008BA20A /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		AD417069218B40D2008BA20A /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		AD41706C218B5A2C008BA20A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AD417070218B61CA008BA20A /* BaseViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerSpec.swift; sourceTree = "<group>"; };
+		AD41707C218B8402008BA20A /* GameModelsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelsSpec.swift; sourceTree = "<group>"; };
+		AD41707E218B8813008BA20A /* GameWorkerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWorkerSpec.swift; sourceTree = "<group>"; };
 		ADE8E4B5218B2F63007E6B01 /* Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADE8E4BA218B2F64007E6B01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ADE8E4BD218B2F64007E6B01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADE8E4BF218B2F65007E6B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADE8E4C2218B2F65007E6B01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADE8E4C4218B2F65007E6B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE8E4C9218B2F65007E6B01 /* Game of LifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game of LifeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADE8E4CD218B2F65007E6B01 /* Game_of_LifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_of_LifeTests.swift; sourceTree = "<group>"; };
 		ADE8E4CF218B2F65007E6B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE8E4D4218B2F65007E6B01 /* Game of LifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game of LifeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE8E4D8218B2F65007E6B01 /* Game_of_LifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_of_LifeUITests.swift; sourceTree = "<group>"; };
@@ -99,6 +115,79 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD417041218B396A008BA20A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AD417065218B3AB7008BA20A /* Game */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AD417057218B399A008BA20A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */,
+				ADE8E4BF218B2F65007E6B01 /* Assets.xcassets */,
+				ADE8E4C4218B2F65007E6B01 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD417065218B3AB7008BA20A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				AD417068218B408D008BA20A /* View */,
+				AD41705E218B3A52008BA20A /* GameInteractor.swift */,
+				AD41705C218B3A52008BA20A /* GameModels.swift */,
+				AD417059218B3A52008BA20A /* GamePresenter.swift */,
+				AD41705D218B3A52008BA20A /* GameViewController.swift */,
+				AD417066218B3C9A008BA20A /* GameViewController.xib */,
+				AD41705A218B3A52008BA20A /* GameWorker.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		AD417068218B408D008BA20A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD417069218B40D2008BA20A /* GameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD41706B218B5A01008BA20A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AD41706C218B5A2C008BA20A /* BaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AD417072218B63F3008BA20A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AD417070218B61CA008BA20A /* BaseViewControllerSpec.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AD41707A218B797F008BA20A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AD41707B218B83EF008BA20A /* Game */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AD41707B218B83EF008BA20A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				AD41707C218B8402008BA20A /* GameModelsSpec.swift */,
+				AD41707E218B8813008BA20A /* GameWorkerSpec.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		ADE8E4AC218B2F63007E6B01 = {
 			isa = PBXGroup;
 			children = (
@@ -124,12 +213,10 @@
 		ADE8E4B7218B2F63007E6B01 /* Game of Life */ = {
 			isa = PBXGroup;
 			children = (
-				ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */,
-				ADE8E4BA218B2F64007E6B01 /* ViewController.swift */,
-				ADE8E4BC218B2F64007E6B01 /* Main.storyboard */,
-				ADE8E4BF218B2F65007E6B01 /* Assets.xcassets */,
+				AD41706B218B5A01008BA20A /* Common */,
 				ADE8E4C1218B2F65007E6B01 /* LaunchScreen.storyboard */,
-				ADE8E4C4218B2F65007E6B01 /* Info.plist */,
+				AD417041218B396A008BA20A /* Scenes */,
+				AD417057218B399A008BA20A /* Supporting Files */,
 			);
 			path = "Game of Life";
 			sourceTree = "<group>";
@@ -137,7 +224,8 @@
 		ADE8E4CC218B2F65007E6B01 /* Game of LifeTests */ = {
 			isa = PBXGroup;
 			children = (
-				ADE8E4CD218B2F65007E6B01 /* Game_of_LifeTests.swift */,
+				AD41707A218B797F008BA20A /* Scenes */,
+				AD417072218B63F3008BA20A /* Common */,
 				ADE8E4CF218B2F65007E6B01 /* Info.plist */,
 			);
 			path = "Game of LifeTests";
@@ -272,9 +360,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD417067218B3C9A008BA20A /* GameViewController.xib in Resources */,
 				ADE8E4C3218B2F65007E6B01 /* LaunchScreen.storyboard in Resources */,
 				ADE8E4C0218B2F65007E6B01 /* Assets.xcassets in Resources */,
-				ADE8E4BE218B2F64007E6B01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,8 +444,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADE8E4BB218B2F64007E6B01 /* ViewController.swift in Sources */,
+				AD417063218B3A52008BA20A /* GameViewController.swift in Sources */,
+				AD417062218B3A52008BA20A /* GameModels.swift in Sources */,
+				AD41706A218B40D2008BA20A /* GameView.swift in Sources */,
+				AD41706D218B5A2C008BA20A /* BaseViewController.swift in Sources */,
+				AD417064218B3A52008BA20A /* GameInteractor.swift in Sources */,
 				ADE8E4B9218B2F64007E6B01 /* AppDelegate.swift in Sources */,
+				AD41705F218B3A52008BA20A /* GamePresenter.swift in Sources */,
+				AD417060218B3A52008BA20A /* GameWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +459,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADE8E4CE218B2F65007E6B01 /* Game_of_LifeTests.swift in Sources */,
+				AD417071218B61CA008BA20A /* BaseViewControllerSpec.swift in Sources */,
+				AD41707D218B8402008BA20A /* GameModelsSpec.swift in Sources */,
+				AD41707F218B8813008BA20A /* GameWorkerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,14 +489,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ADE8E4BC218B2F64007E6B01 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADE8E4BD218B2F64007E6B01 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ADE8E4C1218B2F65007E6B01 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -464,7 +552,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -520,7 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -536,6 +624,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Game of Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -554,6 +643,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Game of Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
