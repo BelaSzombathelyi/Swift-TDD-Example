@@ -62,6 +62,21 @@ class GameWorkerSpec: QuickSpec {
             expect(worker.neighborCount(forRow: 2, column: 4, in: universe)).toEventually(be(2))
             expect(worker.neighborCount(forRow: 3, column: 4, in: universe)).toEventually(be(2))
          }
+         it("two neighbord on border") {
+            let universe = Universe.cleanUniverse(withDimensions: Dimensions(width: 7, height: 7)) { dimension, cells in
+               cells[0][0] = true
+               cells[0][1] = true
+            }
+            expect(worker.neighborCount(forRow: 0, column: 0, in: universe)).toEventually(be(1))
+            expect(worker.neighborCount(forRow: 0, column: 1, in: universe)).toEventually(be(1))
+            expect(worker.neighborCount(forRow: 0, column: 2, in: universe)).toEventually(be(1))
+            
+            expect(worker.neighborCount(forRow: 1, column: 0, in: universe)).toEventually(be(2))
+            expect(worker.neighborCount(forRow: 1, column: 1, in: universe)).toEventually(be(2))
+            
+            expect(worker.neighborCount(forRow: 0, column: 3, in: universe)).toEventually(be(0))
+            expect(worker.neighborCount(forRow: 2, column: 0, in: universe)).toEventually(be(0))
+         }
       }
       
       describe("calculateNextStep(fromUniverse:)") {
