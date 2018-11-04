@@ -22,6 +22,8 @@
 		AD417081218EF4DF008BA20A /* GamePresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417080218EF4DF008BA20A /* GamePresenterSpec.swift */; };
 		AD417083218EF521008BA20A /* GameTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417082218EF521008BA20A /* GameTypeAliases.swift */; };
 		AD417086218F0614008BA20A /* GameModelsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41707C218B8402008BA20A /* GameModelsSpec.swift */; };
+		AD417088218F0804008BA20A /* GameInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417087218F0804008BA20A /* GameInteractorSpec.swift */; };
+		AD41708A218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417089218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift */; };
 		ADE8E4B9218B2F64007E6B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */; };
 		ADE8E4C0218B2F65007E6B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADE8E4BF218B2F65007E6B01 /* Assets.xcassets */; };
 		ADE8E4C3218B2F65007E6B01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE8E4C1218B2F65007E6B01 /* LaunchScreen.storyboard */; };
@@ -66,6 +68,8 @@
 		AD41707E218B8813008BA20A /* GameWorkerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWorkerSpec.swift; sourceTree = "<group>"; };
 		AD417080218EF4DF008BA20A /* GamePresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterSpec.swift; sourceTree = "<group>"; };
 		AD417082218EF521008BA20A /* GameTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeAliases.swift; sourceTree = "<group>"; };
+		AD417087218F0804008BA20A /* GameInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractorSpec.swift; sourceTree = "<group>"; };
+		AD417089218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWorkerSpec_GameUniverse.swift; sourceTree = "<group>"; };
 		ADE8E4B5218B2F63007E6B01 /* Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADE8E4BF218B2F65007E6B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,10 +190,12 @@
 		AD41707B218B83EF008BA20A /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				AD417087218F0804008BA20A /* GameInteractorSpec.swift */,
 				AD41707C218B8402008BA20A /* GameModelsSpec.swift */,
 				AD417080218EF4DF008BA20A /* GamePresenterSpec.swift */,
-				AD41707E218B8813008BA20A /* GameWorkerSpec.swift */,
 				AD417082218EF521008BA20A /* GameTypeAliases.swift */,
+				AD417089218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift */,
+				AD41707E218B8813008BA20A /* GameWorkerSpec.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -466,8 +472,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD417086218F0614008BA20A /* GameModelsSpec.swift in Sources */,
+				AD417088218F0804008BA20A /* GameInteractorSpec.swift in Sources */,
 				AD417071218B61CA008BA20A /* BaseViewControllerSpec.swift in Sources */,
 				AD41707F218B8813008BA20A /* GameWorkerSpec.swift in Sources */,
+				AD41708A218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift in Sources */,
 				AD417083218EF521008BA20A /* GameTypeAliases.swift in Sources */,
 				AD417081218EF4DF008BA20A /* GamePresenterSpec.swift in Sources */,
 			);
