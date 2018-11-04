@@ -40,12 +40,12 @@ class GameViewController: BaseViewController, GameDisplayLogic {
    // MARK: Rotation support
 
    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-      coordinator.animate(alongsideTransition: { _ in
-      }, completion: { _ in
+      coordinator.animate(alongsideTransition: { [weak self] _ in
+         guard let self = self else { return }
          guard let dataStore = self.interactor as? GameDataStore else { assertionFailure(); return }
          guard let universe = dataStore.currentUniverse else { assertionFailure(); return }
          self.updateDisplayedUniverse(withDimensions: universe.dimensions)
-      })
+      }, completion: nil)
       super.viewWillTransition(to: size, with: coordinator)
    }
    
