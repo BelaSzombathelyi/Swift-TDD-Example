@@ -22,10 +22,12 @@ class GameViewMock: GameView {
    var didUpdateCalled: ((_ dimensions: Dimensions) -> Void)?
    
    override func display(universe: Universe) {
+      super.display(universe: universe)
       didDisplayCalled?(universe)
    }
    
    override func update(byDimensions dimensions: Dimensions) {
+      super.update(byDimensions: dimensions)
       didUpdateCalled?(dimensions)
    }
 }
@@ -68,6 +70,13 @@ class GameViewControllerSpec: QuickSpec {
                   gameViewMock.update(byDimensions: dimensions)
                   QuickSpec.current.wait(for: [displayExpectation, updateExpectation], timeout: 1)
                }
+               it("update from viewWillTransition") {
+                  viewController.beginAppearanceTransition(true, animated: false)
+                  viewController.endAppearanceTransition()
+                  let value = UIInterfaceOrientation.landscapeRight.rawValue
+                  UIDevice.current.setValue(value, forKey: "orientation")
+                  QuickSpec.current.wait(for: [displayExpectation, updateExpectation], timeout: 3)
+               }
             }
          }
       }
@@ -95,11 +104,14 @@ class GameViewControllerSpec: QuickSpec {
          }
       }
       it("deinit") {
+         var gameViewController: GameViewController? = GameViewController()
          weak var weakRef: GameViewController?
-         weakRef = viewController
+         weakRef = gameViewController
          viewController.beginAppearanceTransition(true, animated: false)
          viewController.endAppearanceTransition()
-         viewController = nil
+         viewController.beginAppearanceTransition(false, animated: false)
+         viewController.endAppearanceTransition()
+         gameViewController = nil
          expect(weakRef).toEventually(beNil())
       }
    }
