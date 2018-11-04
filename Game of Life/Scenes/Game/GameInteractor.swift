@@ -27,7 +27,7 @@ class GameInteractor: GameBusinessLogic, GameDataStore {
       }
    }
    
-   func scrollingToNextStep() {
+   private func scrollingToNextStep() {
       guard let universe = self.currentUniverse else { assertionFailure(); return }
       let nextUniverse = worker.calculateNextStep(fromUniverse: universe)
       let response = Game.NextStepResponse(universe: nextUniverse)
