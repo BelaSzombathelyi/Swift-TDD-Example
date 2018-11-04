@@ -2,9 +2,6 @@ import Quick
 import Nimble
 @testable import Game_of_Life
 
-fileprivate typealias Universe = Game.Universe
-fileprivate typealias Dimensions = Game.Dimensions
-
 extension Universe {
    
    fileprivate static func cleanUniverse(withDimensions dimensions: Dimensions, _ editCloser: (_ dimensions: Dimensions, _ cells: inout [[Bool]]) -> Void = { _, _ in }) -> Universe {

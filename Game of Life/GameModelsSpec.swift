@@ -2,10 +2,6 @@ import Quick
 import Nimble
 @testable import Game_of_Life
 
-
-fileprivate typealias Universe = Game.Universe
-fileprivate typealias Dimensions = Game.Dimensions
-
 class GameModelsSpec: QuickSpec {
    
    override func spec() {
