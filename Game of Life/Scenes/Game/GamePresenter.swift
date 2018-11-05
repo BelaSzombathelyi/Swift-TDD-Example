@@ -1,7 +1,7 @@
 import UIKit
 
 protocol GamePresentationLogic {
-   func presentNextUniverse(response: Game.NextStepResponse)
+   func presentNextUniverse(response: Game.DisplayLoop.Response)
 }
 
 class GamePresenter: GamePresentationLogic {
@@ -9,8 +9,8 @@ class GamePresenter: GamePresentationLogic {
    
    // MARK: Present next universe
    
-   func presentNextUniverse(response: Game.NextStepResponse) {
-      let viewModel = Game.ViewModel(universe: response.universe)
+   func presentNextUniverse(response: Game.DisplayLoop.Response) {
+      let viewModel = Game.DisplayLoop.ViewModel(universe: response.universe)
       viewController?.displayUniverse(viewModel: viewModel)
    }
 }

@@ -10,7 +10,7 @@ class GameView: UIView {
       return canvas
    }()
 	
-   private func path(forPresentUniverse universe: Game.Universe) -> UIBezierPath {
+   private func path(forPresentUniverse universe: Game.Model.Universe) -> UIBezierPath {
       let path = UIBezierPath()
       for row in 0..<universe.dimensions.height {
          for column in 0..<universe.dimensions.width {
@@ -26,13 +26,13 @@ class GameView: UIView {
       return path
    }
    
-   func display(universe: Game.Universe) {
+   func display(universe: Game.Model.Universe) {
       let path = self.path(forPresentUniverse: universe)
       canvas.frame = self.bounds
       canvas.path = path.cgPath
    }
    
-   func update(byDimensions dimensions: Game.Dimensions) {
+   func update(byDimensions dimensions: Game.Model.Dimensions) {
       let scaleX = self.frame.size.width / CGFloat(dimensions.width)
       let scaleY = self.frame.size.height / CGFloat(dimensions.height)
       let transform2D = CGAffineTransform(scaleX: scaleX, y: scaleY)

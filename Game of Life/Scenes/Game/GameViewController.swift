@@ -1,7 +1,7 @@
 import UIKit
 
 protocol GameDisplayLogic: class {
-   func displayUniverse(viewModel: Game.ViewModel)
+   func displayUniverse(viewModel: Game.DisplayLoop.ViewModel)
 }
 
 class GameViewController: BaseViewController, GameDisplayLogic {
@@ -12,8 +12,8 @@ class GameViewController: BaseViewController, GameDisplayLogic {
    
    override func setup() {
       super.setup()
-      let dimensions = Game.Dimensions(width: 20, height: 40)
-      let universe = Game.Universe(dimensions: dimensions)
+      let dimensions = Game.Model.Dimensions(width: 10, height: 20)
+      let universe = Game.Model.Universe(dimensions: dimensions, randomFill: false)
       let viewController = self
       let interactor = GameInteractor()
       let presenter = GamePresenter()
@@ -21,41 +21,57 @@ class GameViewController: BaseViewController, GameDisplayLogic {
       interactor.presenter = presenter
       interactor.currentUniverse = universe
       presenter.viewController = viewController
-   }
-   
-   // MARK: View lifecycle
-   
-   override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
-      interactor?.start(request: Game.StartRequest(stepTimeInterval: 0.3))
+      tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTapRecognizedOnGameView(_:)))
    }
 
-   override func viewWillDisappear(_ animated: Bool) {
-      super.viewWillDisappear(animated)
-      interactor?.stop()
-   }
-   
    @IBOutlet weak var gameView: GameView!
+   @IBOutlet weak var randomButton: UIButton!
+   @IBOutlet weak var playButton: UIButton!
+   @IBOutlet weak var stopButton: UIButton!
+   var tapRecognizer: UITapGestureRecognizer!
    
-   // MARK: Rotation support
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      gameView.addGestureRecognizer(tapRecognizer)
+   }
 
-   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-      coordinator.animate(alongsideTransition: { [weak self] _ in
-         guard let self = self else { return }
-         guard let dataStore = self.interactor as? GameDataStore else { assertionFailure(); return }
-         guard let universe = dataStore.currentUniverse else { assertionFailure(); return }
-         self.updateDisplayedUniverse(withDimensions: universe.dimensions)
-      }, completion: nil)
-      super.viewWillTransition(to: size, with: coordinator)
+   // MARK: Actions
+   
+   @IBAction func didSelectPlayButton() {
+      playButton.isHidden = true
+      stopButton.isHidden = !playButton.isHidden
+      randomButton.isEnabled = false
+      interactor?.start(request: Game.DisplayLoop.Request(stepTimeInterval: 0.3))
+      tapRecognizer.isEnabled = false
    }
    
-   func updateDisplayedUniverse(withDimensions dimensions: Game.Dimensions) {
+   @IBAction func didSelectStopButton() {
+      playButton.isHidden = false
+      stopButton.isHidden = !playButton.isHidden
+      randomButton.isEnabled = true
+      interactor?.stop()
+      tapRecognizer.isEnabled = true
+   }
+   
+   @IBAction func didSelectRandomButton() {
+      guard var dataStore = self.interactor as? GameDataStore else { assertionFailure(); return }
+      guard let dimensions = dataStore.currentUniverse?.dimensions else { assertionFailure(); return }
+      dataStore.currentUniverse = Game.Model.Universe(dimensions: dimensions, randomFill: true)
+      interactor?.update()
+   }
+   
+   @objc func onTapRecognizedOnGameView(_ recognizer: UITapGestureRecognizer) {
+      let location = recognizer.location(in: gameView)
+      interactor?.userInput(request: Game.UserInputAction.Request(location: location, viewSize: gameView.bounds.size))
+   }
+
+   func updateDisplayedUniverse(withDimensions dimensions: Game.Model.Dimensions) {
       gameView.update(byDimensions: dimensions)
    }
    
    // MARK: GameDisplayLogic
    
-   func displayUniverse(viewModel: Game.ViewModel) {
+   func displayUniverse(viewModel: Game.DisplayLoop.ViewModel) {
       gameView.display(universe: viewModel.universe)
       updateDisplayedUniverse(withDimensions: viewModel.universe.dimensions)
    }

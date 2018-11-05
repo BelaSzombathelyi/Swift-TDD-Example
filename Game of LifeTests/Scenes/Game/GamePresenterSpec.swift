@@ -2,11 +2,11 @@ import Quick
 import Nimble
 @testable import Game_of_Life
 
-class GameDisplayLogicImplementation: GameDisplayLogic {
+class GameDisplayLogicMock: GameDisplayLogic {
    
-   var didDisplayUniverseCalled: (_ viewModel: Game.ViewModel) -> Void = { _ in }
+   var didDisplayUniverseCalled: (_ viewModel: Game.DisplayLoop.ViewModel) -> Void = { _ in }
    
-   func displayUniverse(viewModel: Game.ViewModel) {
+   func displayUniverse(viewModel: Game.DisplayLoop.ViewModel) {
       didDisplayUniverseCalled(viewModel)
    }
 }
@@ -18,13 +18,12 @@ class GamePresenterDeinit: GamePresenter {}
 class GamePresenterSpec: QuickSpec {
    
    override func spec() {
-
-      let dimensions = Dimensions(width: 3, height: 3)
-      let universe = Universe(dimensions: dimensions)
-      let response = Game.NextStepResponse(universe: universe)
+      let dimensions = Game.Model.Dimensions(width: 3, height: 3)
+      let universe = Game.Model.Universe(dimensions: dimensions)
+      let response = Game.DisplayLoop.Response(universe: universe)
 
       describe("displayUniverse viewModel") {
-         let displayLogic = GameDisplayLogicImplementation()
+         let displayLogic = GameDisplayLogicMock()
          let presenter = GamePresenter()
          presenter.viewController = displayLogic
          
@@ -47,7 +46,7 @@ class GamePresenterSpec: QuickSpec {
          var presenter: GamePresenter!
          beforeEach {
             presenter = GamePresenter()
-            let displayLogic = GameDisplayLogicImplementation()
+            let displayLogic = GameDisplayLogicMock()
             presenter.viewController = displayLogic
          }
          it("with an unused object") {

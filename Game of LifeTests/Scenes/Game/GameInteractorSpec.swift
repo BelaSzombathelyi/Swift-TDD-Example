@@ -3,11 +3,11 @@ import Nimble
 @testable import Game_of_Life
 
 
-class GamePresentationLogicImplementation: GamePresentationLogic {
+class GamePresentationLogicMock: GamePresentationLogic {
    
-   var didPresentNextUniverseCalled: (_ response: Game.NextStepResponse) -> Void = { _ in }
+   var didPresentNextUniverseCalled: (_ response: Game.DisplayLoop.Response) -> Void = { _ in }
    
-   func presentNextUniverse(response: Game.NextStepResponse) {
+   func presentNextUniverse(response: Game.DisplayLoop.Response) {
       didPresentNextUniverseCalled(response)
    }
 }
@@ -17,24 +17,24 @@ class GameInteractorSpec: QuickSpec {
 
    override func spec() {
       var interactor: GameInteractor!
-      var dimensions: Dimensions!
-      var universe: Universe!
-      var fakePresenter: GamePresentationLogicImplementation!
+      var dimensions: Game.Model.Dimensions!
+      var universe: Game.Model.Universe!
+      var fakePresenter: GamePresentationLogicMock!
       beforeEach {
          func generateSize() -> UInt8 {
             return 1 + UInt8(arc4random_uniform(100))
          }
-         dimensions = Dimensions(width: generateSize(), height: generateSize())
-         fakePresenter = GamePresentationLogicImplementation()
+         dimensions = Game.Model.Dimensions(width: generateSize(), height: generateSize())
+         fakePresenter = GamePresentationLogicMock()
          interactor = GameInteractor()
-         universe = Universe(dimensions: dimensions)
+         universe = Game.Model.Universe(dimensions: dimensions)
          interactor.presenter = fakePresenter
          interactor.currentUniverse = universe
       }
       describe("GameDataStore.currentUniverse") {
          it("not nil") {
             var gameDataStore: GameDataStore = interactor
-            gameDataStore.currentUniverse = Universe(dimensions: dimensions)
+            gameDataStore.currentUniverse = Game.Model.Universe(dimensions: dimensions)
             expect(gameDataStore.currentUniverse).toEventuallyNot(beNil())
          }
       }
@@ -54,11 +54,11 @@ class GameInteractorSpec: QuickSpec {
             businessLogic?.stop()
          }
          it("call present the new Universe immediately") {
-            let request = Game.StartRequest(stepTimeInterval: 3)
+            let request = Game.DisplayLoop.Request(stepTimeInterval: 3)
             businessLogic.start(request: request)
             expect(counter).toEventually(be(1))
          }
-         context("call PresentNextUniverse many times") {
+         context("call PresentNextUniverse") {
             let stepTimeInterval: TimeInterval = 1
             let stepCount = 3
             var startTime: Date!
@@ -82,10 +82,10 @@ class GameInteractorSpec: QuickSpec {
                }
             }
             let expectedTime = stepTimeInterval * TimeInterval(stepCount - 1)
-            let request = Game.StartRequest(stepTimeInterval: stepTimeInterval)
+            let request = Game.DisplayLoop.Request(stepTimeInterval: stepTimeInterval)
             let timeout = expectedTime + (stepTimeInterval + 0.5)
 
-            it("start called once") {
+            it("called once") {
                lastCount = stepCount
                businessLogic.start(request: request)
                QuickSpec.current.wait(for: [reachCountExpectation], timeout: timeout)
@@ -93,10 +93,10 @@ class GameInteractorSpec: QuickSpec {
                expect(expectedTime).to(beCloseTo(neededTime, within: stepTimeInterval / 2))
                expect(counter).toEventually(be(lastCount))
             }
-            it("start called twice") {
+            it("called twice") {
                lastCount = stepCount + 1
                businessLogic.start(request: request)
-               let request2 = Game.StartRequest(stepTimeInterval: stepTimeInterval)
+               let request2 = Game.DisplayLoop.Request(stepTimeInterval: stepTimeInterval)
                businessLogic.start(request: request2)
                QuickSpec.current.wait(for: [reachCountExpectation], timeout: timeout)
                let neededTime = endTime.timeIntervalSince1970 - startTime.timeIntervalSince1970
@@ -115,13 +115,13 @@ class GameInteractorSpec: QuickSpec {
          }
       }
       
-      describe("ObjectLifeCycle") {
+      describe("deinit") {
          weak var weakRef: GameInteractor?
          beforeEach {
             weakRef = interactor
          }
-         it("deinit") {
-            weakRef!.start(request: Game.StartRequest(stepTimeInterval: 3))
+         it("") {
+            weakRef!.start(request: Game.DisplayLoop.Request(stepTimeInterval: 3))
             interactor = nil
             expect(weakRef).toEventually(beNil())
          }

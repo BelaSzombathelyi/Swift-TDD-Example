@@ -20,15 +20,18 @@
 		AD417071218B61CA008BA20A /* BaseViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417070218B61CA008BA20A /* BaseViewControllerSpec.swift */; };
 		AD41707F218B8813008BA20A /* GameWorkerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41707E218B8813008BA20A /* GameWorkerSpec.swift */; };
 		AD417081218EF4DF008BA20A /* GamePresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417080218EF4DF008BA20A /* GamePresenterSpec.swift */; };
-		AD417083218EF521008BA20A /* GameTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417082218EF521008BA20A /* GameTypeAliases.swift */; };
 		AD417086218F0614008BA20A /* GameModelsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41707C218B8402008BA20A /* GameModelsSpec.swift */; };
 		AD417088218F0804008BA20A /* GameInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417087218F0804008BA20A /* GameInteractorSpec.swift */; };
 		AD41708A218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417089218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift */; };
 		AD41708C218F8AAF008BA20A /* GameViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41708B218F8AAF008BA20A /* GameViewControllerSpec.swift */; };
+		AD8D8EB1218FC9E5003EE6B4 /* GameWorkerPointCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D8EB0218FC9E5003EE6B4 /* GameWorkerPointCalculator.swift */; };
+		AD8D8EB3218FCF7D003EE6B4 /* Game+Universe+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D8EB2218FCF7D003EE6B4 /* Game+Universe+Extension.swift */; };
+		AD8D8EB5218FD443003EE6B4 /* GameWorkerPointCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D8EB4218FD443003EE6B4 /* GameWorkerPointCalculatorSpec.swift */; };
+		ADD032242190B3B200E3B099 /* GameWorkerSpec_GameUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD417089218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift */; };
 		ADE8E4B9218B2F64007E6B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */; };
 		ADE8E4C0218B2F65007E6B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADE8E4BF218B2F65007E6B01 /* Assets.xcassets */; };
 		ADE8E4C3218B2F65007E6B01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE8E4C1218B2F65007E6B01 /* LaunchScreen.storyboard */; };
-		ADE8E4D9218B2F65007E6B01 /* Game_of_LifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4D8218B2F65007E6B01 /* Game_of_LifeUITests.swift */; };
+		ADE8E4D9218B2F65007E6B01 /* GameViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8E4D8218B2F65007E6B01 /* GameViewControllerUITests.swift */; };
 		FFF9CA2862993D33A7A2353F /* libPods-Game of LifeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D570199AE8FA621142232E16 /* libPods-Game of LifeTests.a */; };
 /* End PBXBuildFile section */
 
@@ -68,10 +71,12 @@
 		AD41707C218B8402008BA20A /* GameModelsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelsSpec.swift; sourceTree = "<group>"; };
 		AD41707E218B8813008BA20A /* GameWorkerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWorkerSpec.swift; sourceTree = "<group>"; };
 		AD417080218EF4DF008BA20A /* GamePresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterSpec.swift; sourceTree = "<group>"; };
-		AD417082218EF521008BA20A /* GameTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeAliases.swift; sourceTree = "<group>"; };
 		AD417087218F0804008BA20A /* GameInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractorSpec.swift; sourceTree = "<group>"; };
 		AD417089218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWorkerSpec_GameUniverse.swift; sourceTree = "<group>"; };
 		AD41708B218F8AAF008BA20A /* GameViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerSpec.swift; sourceTree = "<group>"; };
+		AD8D8EB0218FC9E5003EE6B4 /* GameWorkerPointCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWorkerPointCalculator.swift; sourceTree = "<group>"; };
+		AD8D8EB2218FCF7D003EE6B4 /* Game+Universe+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+Universe+Extension.swift"; sourceTree = "<group>"; };
+		AD8D8EB4218FD443003EE6B4 /* GameWorkerPointCalculatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWorkerPointCalculatorSpec.swift; sourceTree = "<group>"; };
 		ADE8E4B5218B2F63007E6B01 /* Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE8E4B8218B2F64007E6B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADE8E4BF218B2F65007E6B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +85,7 @@
 		ADE8E4C9218B2F65007E6B01 /* Game of LifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game of LifeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE8E4CF218B2F65007E6B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE8E4D4218B2F65007E6B01 /* Game of LifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game of LifeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADE8E4D8218B2F65007E6B01 /* Game_of_LifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_of_LifeUITests.swift; sourceTree = "<group>"; };
+		ADE8E4D8218B2F65007E6B01 /* GameViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerUITests.swift; sourceTree = "<group>"; };
 		ADE8E4DA218B2F65007E6B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0B685C3541658C08AB9EEAF /* Pods-Game of Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of Life.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Game of Life/Pods-Game of Life.debug.xcconfig"; sourceTree = "<group>"; };
 		CE7184A8C55879E1E9B95290 /* Pods-Game of LifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game of LifeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Game of LifeTests/Pods-Game of LifeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +158,8 @@
 				AD41705D218B3A52008BA20A /* GameViewController.swift */,
 				AD417066218B3C9A008BA20A /* GameViewController.xib */,
 				AD41705A218B3A52008BA20A /* GameWorker.swift */,
+				AD8D8EB0218FC9E5003EE6B4 /* GameWorkerPointCalculator.swift */,
+				AD8D8EB2218FCF7D003EE6B4 /* Game+Universe+Extension.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -195,8 +202,8 @@
 				AD417087218F0804008BA20A /* GameInteractorSpec.swift */,
 				AD41707C218B8402008BA20A /* GameModelsSpec.swift */,
 				AD417080218EF4DF008BA20A /* GamePresenterSpec.swift */,
-				AD417082218EF521008BA20A /* GameTypeAliases.swift */,
 				AD41708B218F8AAF008BA20A /* GameViewControllerSpec.swift */,
+				AD8D8EB4218FD443003EE6B4 /* GameWorkerPointCalculatorSpec.swift */,
 				AD417089218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift */,
 				AD41707E218B8813008BA20A /* GameWorkerSpec.swift */,
 			);
@@ -249,7 +256,7 @@
 		ADE8E4D7218B2F65007E6B01 /* Game of LifeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				ADE8E4D8218B2F65007E6B01 /* Game_of_LifeUITests.swift */,
+				ADE8E4D8218B2F65007E6B01 /* GameViewControllerUITests.swift */,
 				ADE8E4DA218B2F65007E6B01 /* Info.plist */,
 			);
 			path = "Game of LifeUITests";
@@ -463,7 +470,9 @@
 				AD417062218B3A52008BA20A /* GameModels.swift in Sources */,
 				AD41706A218B40D2008BA20A /* GameView.swift in Sources */,
 				AD41706D218B5A2C008BA20A /* BaseViewController.swift in Sources */,
+				AD8D8EB1218FC9E5003EE6B4 /* GameWorkerPointCalculator.swift in Sources */,
 				AD417064218B3A52008BA20A /* GameInteractor.swift in Sources */,
+				AD8D8EB3218FCF7D003EE6B4 /* Game+Universe+Extension.swift in Sources */,
 				ADE8E4B9218B2F64007E6B01 /* AppDelegate.swift in Sources */,
 				AD41705F218B3A52008BA20A /* GamePresenter.swift in Sources */,
 				AD417060218B3A52008BA20A /* GameWorker.swift in Sources */,
@@ -478,9 +487,9 @@
 				AD417088218F0804008BA20A /* GameInteractorSpec.swift in Sources */,
 				AD417071218B61CA008BA20A /* BaseViewControllerSpec.swift in Sources */,
 				AD41708C218F8AAF008BA20A /* GameViewControllerSpec.swift in Sources */,
+				AD8D8EB5218FD443003EE6B4 /* GameWorkerPointCalculatorSpec.swift in Sources */,
 				AD41707F218B8813008BA20A /* GameWorkerSpec.swift in Sources */,
 				AD41708A218F0871008BA20A /* GameWorkerSpec_GameUniverse.swift in Sources */,
-				AD417083218EF521008BA20A /* GameTypeAliases.swift in Sources */,
 				AD417081218EF4DF008BA20A /* GamePresenterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,7 +498,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADE8E4D9218B2F65007E6B01 /* Game_of_LifeUITests.swift in Sources */,
+				ADE8E4D9218B2F65007E6B01 /* GameViewControllerUITests.swift in Sources */,
+				ADD032242190B3B200E3B099 /* GameWorkerSpec_GameUniverse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

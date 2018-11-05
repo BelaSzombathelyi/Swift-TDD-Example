@@ -2,7 +2,7 @@ import UIKit
 
 class GameWorker {
    
-   func neighborCount(forRow row: Int, column: Int, in universe: Game.Universe) -> Int {
+   func neighborCount(forRow row: Int, column: Int, in universe: Game.Model.Universe) -> Int {
       var count = 0
       let minRowIndex = max(row - 1, 0)
       let maxRowIndex = min(row + 2, Int(universe.dimensions.height))
@@ -24,7 +24,7 @@ class GameWorker {
       return count
    }
    
-   func calculateNextStep(fromUniverse universe: Game.Universe) -> Game.Universe {
+   func calculateNextStep(fromUniverse universe: Game.Model.Universe) -> Game.Model.Universe {
       var cells = universe.cells
       for row in 0..<universe.dimensions.height {
          for column in 0..<universe.dimensions.width {
@@ -42,6 +42,6 @@ class GameWorker {
             }
          }
       }
-      return Game.Universe(dimensions: universe.dimensions, cells: cells)
+      return Game.Model.Universe(cells: cells, dimensions: universe.dimensions)
    }
 }

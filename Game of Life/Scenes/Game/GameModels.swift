@@ -1,46 +1,32 @@
 import UIKit
 
 enum Game {
-   struct Dimensions {
-      let width: UInt8
-      let height: UInt8
-   }
-   
-   struct Universe {
-      let cells: [[Bool]]
-      let dimensions: Dimensions
-      
-      //Create universe with random data
-      init(dimensions: Dimensions) {
-         var table = [[Bool]]()
-         for _ in 0..<dimensions.height {
-            var row = [Bool]()
-            for _ in 0..<dimensions.width {
-               let value = arc4random_uniform(UInt32(2))
-               row.append(value == 0)
-            }
-            table.append(row)
-         }
-         self.init(dimensions: dimensions, cells: table)
+   enum Model {
+      struct Dimensions {
+         let width: UInt8
+         let height: UInt8
       }
-      
-      init(dimensions: Dimensions, cells: [[Bool]]) {
-         self.dimensions = dimensions
-         self.cells = cells
+      struct Universe {
+         let cells: [[Bool]]
+         let dimensions: Dimensions
       }
    }
-   
-   struct StartRequest {
-      let stepTimeInterval: TimeInterval
+   enum DisplayLoop {
+      struct Request {
+         let stepTimeInterval: TimeInterval
+      }
+      struct Response {
+         let universe: Game.Model.Universe
+      }
+      struct ViewModel {
+         let universe: Game.Model.Universe
+      }
    }
-   
-   struct NextStepResponse {
-      let universe: Universe
+   enum UserInputAction {
+      struct Request {
+         let location: CGPoint
+         let viewSize: CGSize
+      }
    }
-   
-   struct ViewModel {
-      let universe: Universe
-   }
-   
 }
 
